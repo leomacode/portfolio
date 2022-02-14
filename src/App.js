@@ -1,10 +1,19 @@
+import { useEffect } from "react";
 import "./App.css";
 import { Navbar } from "./components";
+import { BrowserRouter } from "react-router-dom";
+import { keepTheme } from "./utils/themes";
+
 function App() {
+  useEffect(() => {
+    keepTheme();
+  });
   return (
-    <div className="App">
-      <Navbar />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+      </div>
+    </BrowserRouter>
   );
 }
 
