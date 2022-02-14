@@ -4,17 +4,21 @@ import { useLocation } from "react-router-dom";
 import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
 import { setTheme } from "../utils/themes";
 
-const handleClick = () => {
-  if (localStorage.getItem("theme") === "theme-dark") {
-    setTheme("theme-light");
-  } else {
-    setTheme("theme-dark");
-  }
-};
-
 function Navbar() {
   const [dataVisible, setDataVisible] = useState(false);
   const location = useLocation();
+  const [togClass, setTogClass] = useState("");
+  let theme = localStorage.getItem("theme");
+
+  const handleClick = () => {
+    if (localStorage.getItem("theme") === "theme-dark") {
+      setTheme("theme-light");
+      setTogClass("light");
+    } else {
+      setTheme("theme-dark");
+      setTogClass("dark");
+    }
+  };
 
   //close the nav menu when somewhere out of the menu is clicked
   useEffect(() => {
@@ -32,6 +36,15 @@ function Navbar() {
   useEffect(() => {
     setDataVisible(false);
   }, [location]);
+
+  //set the theme icon according to the default theme
+  useEffect(() => {
+    if (localStorage.getItem("theme") === "theme-dark") {
+      setTogClass("dark");
+    } else if (localStorage.getItem("theme") === "theme-light") {
+      setTogClass("light");
+    }
+  }, [theme]);
 
   return (
     <header className="header">
@@ -62,7 +75,11 @@ function Navbar() {
           </ul>
 
           <div className="switch btn__icon" onClick={() => handleClick()}>
-            {true ? <FaMoon className="moon" /> : <FaSun className="soon" />}
+            {togClass === "light" ? (
+              <FaMoon className="moon" />
+            ) : (
+              <FaSun className="soon" />
+            )}
           </div>
 
           <div
