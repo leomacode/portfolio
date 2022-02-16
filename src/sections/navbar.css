@@ -3,6 +3,8 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 100;
+  background: var(--clr-bg);
 }
 
 .navbar {
@@ -14,7 +16,7 @@
 .header__logo-link {
   font-weight: 700;
   font-size: 1.5rem;
-  color: var(--clr-primary) !important;
+  color: var(--clr-primary);
 }
 
 .header__nav,
@@ -23,15 +25,15 @@
   gap: 1.75rem;
 }
 
-.link {
+.nav__link {
   color: var(--clr-fg);
   position: relative;
 }
-.link:hover {
+.nav__link:hover {
   color: var(--clr-primary);
 }
 
-.link::before {
+.nav__link::before {
   content: "";
   display: block;
   position: absolute;
@@ -42,7 +44,7 @@
   transition: transform 400ms ease-in-out;
 }
 
-.link:hover::before {
+.nav__link:hover::before {
   width: 100%;
   transform: scale(1, 1);
   transform-origin: left;
@@ -54,10 +56,6 @@
 }
 
 @media (max-width: 40rem) {
-  .link:hover::before {
-    display: none;
-  }
-
   .nav__list {
     background: var(--clr-bg);
     position: absolute;

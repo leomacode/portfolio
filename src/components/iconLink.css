@@ -1,0 +1,27 @@
+.icon__link,
+.icon__link:link,
+.icon__link:visited {
+  color: var(--clr-fg);
+  position: relative;
+}
+
+.icon__link:hover {
+  color: var(--clr-primary);
+}
+
+.icon__link::before {
+  content: "";
+  display: inline-block;
+  background: var(--clr-primary);
+  height: 0.125em;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform 300ms ease-in-out;
+}
+
+.icon__link:hover::before {
+  transform: scale(1, 1);
+}

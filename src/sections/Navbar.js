@@ -1,6 +1,7 @@
-import "./nav.css";
+import "./navbar.css";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
 import { setTheme } from "../utils/themes";
 
@@ -50,7 +51,7 @@ function Navbar() {
     <header className="header">
       <div className="navbar flex container">
         <div className="header__logo">
-          <a href="/" className="link header__logo-link">
+          <a href="/" className="header__logo-link">
             LM.
           </a>
         </div>
@@ -58,19 +59,19 @@ function Navbar() {
         <nav className="header__nav flex">
           <ul className="nav__list flex" data-visible={dataVisible}>
             <li className="nav__list-item">
-              <a className="link link--nav" href="#projects">
+              <HashLink className="nav__link" to="#projects">
                 Projects
-              </a>
+              </HashLink>
             </li>
             <li className="nav__list-item">
-              <a className="link link--nav" href="#skills">
+              <HashLink className="nav__link" to="#skills">
                 Skills
-              </a>
+              </HashLink>
             </li>
             <li className="nav__list-item">
-              <a className="link link--nav" href="#contact">
+              <HashLink className="nav__link" to="#contact">
                 Contact
-              </a>
+              </HashLink>
             </li>
           </ul>
 
