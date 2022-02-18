@@ -1,0 +1,37 @@
+.contact__btn--outline {
+  padding: 0.6em 1.2em;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-block: 2rem;
+  text-transform: lowercase;
+  transition: transform 0.2s ease-in-out;
+  color: var(--clr-primary);
+  border: 2px solid var(--clr-primary);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.contact__btn--outline:focus,
+.contact__btn--outline:hover {
+  color: var(--clr-bg);
+}
+
+.contact__btn--outline:before {
+  content: "";
+  position: absolute;
+  background-color: var(--clr-primary);
+  right: 100%;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: right 0.2s ease-in-out;
+}
+
+.contact__btn--outline:hover::before,
+.contact__btn--outline:focus::before {
+  right: 0;
+}

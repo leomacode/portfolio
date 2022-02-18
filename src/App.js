@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./App.css";
-import { Navbar, Intro, Projects, Skills, Contact } from "./sections";
+import { Navbar, Intro, Projects, Skills, Contact, Footer } from "./sections";
 import { BrowserRouter } from "react-router-dom";
 import { keepTheme } from "./utils/themes";
 
@@ -18,6 +18,7 @@ function App() {
           <Skills />
           <Contact />
         </main>
+        <Footer />
       </div>
     </BrowserRouter>
   );

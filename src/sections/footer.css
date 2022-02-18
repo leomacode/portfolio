@@ -1,0 +1,7 @@
+.footer {
+  height: 8rem;
+  justify-content: center;
+  align-items: center;
+  /* background: var(--clr-fg);
+  color: var(--clr-bg); */
+}
