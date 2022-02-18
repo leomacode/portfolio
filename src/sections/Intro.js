@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IconLink } from "../components";
 function Intro() {
   return (
-    <section className="intro center">
+    <section id="intro" className="intro center">
       <h1 className="about__title text-h1">
         Hi, My name is <span className="about__name">Leo Ma.</span>
       </h1>

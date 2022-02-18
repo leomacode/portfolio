@@ -23,8 +23,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  animation: typewriter 2000ms steps(8) 700ms forwards,
-    blink 800ms steps(18) infinite;
+  animation: typewriter 1500ms steps(8) 700ms forwards,
+    blink 900ms steps(20) infinite;
 }
 
 .about__name::before {

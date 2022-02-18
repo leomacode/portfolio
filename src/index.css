@@ -37,6 +37,7 @@ a {
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
 }
 
 /* Set core body defaults */
@@ -151,6 +152,16 @@ body {
   padding: 0 1rem;
   max-width: 72rem;
   margin: 0 auto;
+}
+
+.section-margin-top {
+  margin-top: 3rem;
+}
+
+@media (min-width: 60rem) {
+  .section-margin-top {
+    margin-top: 4rem;
+  }
 }
 
 /* layout */

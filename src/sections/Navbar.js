@@ -51,9 +51,9 @@ function Navbar() {
     <header className="header">
       <div className="navbar flex container">
         <div className="header__logo">
-          <a href="/" className="header__logo-link">
+          <HashLink to="#intro" className="header__logo-link">
             LM.
-          </a>
+          </HashLink>
         </div>
 
         <nav className="header__nav flex">

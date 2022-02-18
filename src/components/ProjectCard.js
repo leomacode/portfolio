@@ -5,13 +5,13 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 function ProjectCard({ name, description, githubPath, livePath }) {
   return (
-    <div class="project">
+    <div className="project">
       <h3 className="text-h3 project__title capitalize">{name}</h3>
-      <p class="project__description">{description}</p>
-      <ul class="project__stack">
-        <li class="project__stack-item">HTML</li>
-        <li class="project__stack-item">CSS</li>
-        <li class="project__stack-item">React</li>
+      <p className="project__description">{description}</p>
+      <ul className="project__stack">
+        <li className="project__stack-item">HTML</li>
+        <li className="project__stack-item">CSS</li>
+        <li className="project__stack-item">React</li>
       </ul>
 
       <div className="project__icon-links flex">

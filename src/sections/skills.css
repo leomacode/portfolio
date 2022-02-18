@@ -1,0 +1,27 @@
+.skills {
+  padding: 1rem 0;
+}
+
+.skills__list {
+  max-width: 30rem;
+  width: 100%;
+  margin: 2rem auto;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skills__list-item {
+  margin: 0.7em;
+  padding: 1em 1.4em;
+  font-weight: 500;
+  background-color: var(--clr-bg-alt);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  border: 0;
+}
+
+.skills__list-item:hover {
+  transform: translateY(-7px);
+  transition: transform 200ms ease-in-out;
+}

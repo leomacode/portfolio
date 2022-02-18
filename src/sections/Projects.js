@@ -1,6 +1,6 @@
 import React from "react";
 import "./projects.css";
-import { ProjectCard } from "../components";
+import { ProjectCard, SectionTitle } from "../components";
 
 const projects = [
   {
@@ -10,12 +10,47 @@ const projects = [
     githubPath: "https://github.com/leomacode/designo/",
     livePath: "https://festive-swirles-8aecae.netlify.app",
   },
+  {
+    name: "designo1",
+    description:
+      "An exhibition in implementing a multi-page responsive static website from a figma design.",
+    githubPath: "https://github.com/leomacode/designo/",
+    livePath: "https://festive-swirles-8aecae.netlify.app",
+  },
+  {
+    name: "designo2",
+    description:
+      "An exhibition in implementing a multi-page responsive static website from a figma design.",
+    githubPath: "https://github.com/leomacode/designo/",
+    livePath: "https://festive-swirles-8aecae.netlify.app",
+  },
+  {
+    name: "designo3",
+    description:
+      "An exhibition in implementing a multi-page responsive static website from a figma design.",
+    githubPath: "https://github.com/leomacode/designo/",
+    livePath: "https://festive-swirles-8aecae.netlify.app",
+  },
+  {
+    name: "designo4",
+    description:
+      "An exhibition in implementing a multi-page responsive static website from a figma design.",
+    githubPath: "https://github.com/leomacode/designo/",
+    livePath: "https://festive-swirles-8aecae.netlify.app",
+  },
+  {
+    name: "designo5",
+    description:
+      "An exhibition in implementing a multi-page responsive static website from a figma design.",
+    githubPath: "https://github.com/leomacode/designo/",
+    livePath: "https://festive-swirles-8aecae.netlify.app",
+  },
 ];
 
 function Projects() {
   return (
-    <section id="projects" className="projects">
-      <h2 className="text-h2 uppercase"> Projects</h2>
+    <section id="projects" className="projects section-margin-top">
+      <SectionTitle title="Projects" />
       <div className="projects-collection">
         {projects.map(({ name, description, githubPath, livePath }) => (
           <ProjectCard
@@ -26,16 +61,6 @@ function Projects() {
             livePath={livePath}
           />
         ))}
-        <ProjectCard
-          name="Designo"
-          githubPath="https://github.com/leomacode/designo/"
-          livePath="https://festive-swirles-8aecae.netlify.app"
-        />
-        <ProjectCard
-          name="Designo"
-          githubPath="https://github.com/leomacode/designo/"
-          livePath="https://festive-swirles-8aecae.netlify.app"
-        />
       </div>
     </section>
   );
