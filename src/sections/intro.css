@@ -14,6 +14,7 @@
   position: relative;
   color: var(--clr-primary);
 }
+
 .about__name::after,
 .about__name::before {
   content: "";

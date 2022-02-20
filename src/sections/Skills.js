@@ -12,6 +12,8 @@ const skilldata = [
   "Redux",
   "Veux",
   "Git",
+  "npm",
+  "yarn",
   "Unit Test",
   "React Testing Library",
   "Node.js",
