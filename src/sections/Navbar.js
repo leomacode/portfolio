@@ -3,23 +3,17 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
-import { setTheme } from "../utils/themes";
+import { changeTheme, setUpTheme } from "../utils/themes";
 
 function Navbar() {
   const [dataVisible, setDataVisible] = useState(false);
   const location = useLocation();
-  const [togClass, setTogClass] = useState("");
-  let theme = localStorage.getItem("theme");
+  const [theme, setTheme] = useState(localStorage.getItem("theme"));
 
-  const handleClick = () => {
-    if (localStorage.getItem("theme") === "theme-dark") {
-      setTheme("theme-light");
-      setTogClass("light");
-    } else {
-      setTheme("theme-dark");
-      setTogClass("dark");
-    }
-  };
+  //initially set up the theme
+  useEffect(() => {
+    setUpTheme(theme);
+  });
 
   //close the nav menu when somewhere out of the menu is clicked
   useEffect(() => {
@@ -38,14 +32,11 @@ function Navbar() {
     setDataVisible(false);
   }, [location]);
 
-  //set the theme icon according to the default theme
-  useEffect(() => {
-    if (localStorage.getItem("theme") === "theme-dark") {
-      setTogClass("dark");
-    } else if (localStorage.getItem("theme") === "theme-light") {
-      setTogClass("light");
-    }
-  }, [theme]);
+  //changer the theme when click the button
+  const handleClick = () => {
+    changeTheme();
+    setTheme(theme === "theme-light" ? "theme-dark" : "theme-light");
+  };
 
   return (
     <header className="header">
@@ -75,8 +66,8 @@ function Navbar() {
             </li>
           </ul>
 
-          <div className="switch btn__icon" onClick={() => handleClick()}>
-            {togClass === "light" ? (
+          <div className="switch btn__icon" onClick={handleClick}>
+            {theme === "theme-light" ? (
               <FaMoon className="moon" />
             ) : (
               <FaSun className="soon" />
