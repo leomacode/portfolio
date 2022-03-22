@@ -1,7 +1,6 @@
 import "./App.css";
 import { Navbar, Intro, Projects, Skills, Contact, Footer } from "./sections";
 import { BrowserRouter } from "react-router-dom";
-import { useEffect } from "react";
 
 function App() {
   return (
