@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    ReactGa.initialize("G-3MK0ZCFN9T");
+    ReactGa.initialize(`${process.env.REACT_APP_GOOGLE_ANALYTICS_API_KEY}`);
     // to report page view
     ReactGa.pageview("/");
   }, []);
